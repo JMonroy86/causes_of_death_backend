@@ -1,0 +1,33 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.16.1"
+  },
+  "name": "causes_of_death_backend",
+  "version": "1.0.0",
+  "description": "Causes of death API",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JMonroy86/causes_of_death_backend.git"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "sequelize",
+    "mysql",
+    "rest",
+    "api"
+  ],
+  "author": "jmonroy86",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JMonroy86/causes_of_death_backend/issues"
+  },
+  "homepage": "https://github.com/JMonroy86/causes_of_death_backend#readme"
+}
