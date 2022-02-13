@@ -1,5 +1,6 @@
 const db = require("../../models");
 const causes = db.causes_data;
+var url = require("url");
 
 exports.create = async (req, res) => {
   try {
@@ -34,7 +35,34 @@ exports.create = async (req, res) => {
   } catch (error) {
     res.status(500).send({
       message:
-        err.message || "Some error occurred while creating the Death Causes Data.",
+        error.message ||
+        "Some error occurred while creating the Death Causes Data.",
+    });
+  }
+};
+
+exports.findByTag = async (req, res) => {
+  try {
+    const tagsAttributes = req.query.tagsArray;
+    const tags_splited = tagsAttributes.split(',');
+    const year = req.query.year;
+    if (tagsAttributes.length > 0) {
+      const tagsInfo = await causes.findAll({
+        where: { year: year },
+        attributes: [tagsAttributes],
+        order: [
+          ['month', 'ASC'],
+      ],
+      });
+      res.status(200).send(tagsInfo);
+    } else {
+      res.status(200).send([]);
+    }
+  } catch (error) {
+    res.status(500).send({
+      message:
+        error.message ||
+        "Some error occurred while creating the Death Causes Data.",
     });
   }
 };

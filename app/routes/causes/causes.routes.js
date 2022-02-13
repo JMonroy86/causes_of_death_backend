@@ -3,6 +3,7 @@ module.exports = app => {
   var router = require("express").Router();
   // Create a new cause
   router.post("/create", causes.create);
+  router.get("/findByTag", causes.findByTag);
   
   app.use('/api/causes', router);
   
