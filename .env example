@@ -1,0 +1,4 @@
+DB_HOST ="localhost"
+DB_USER ="root"
+DB_PSW =<your_local_mysql_psw>
+DB_NAME = "death_causes_DB"
