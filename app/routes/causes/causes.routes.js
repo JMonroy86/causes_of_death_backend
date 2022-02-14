@@ -4,6 +4,7 @@ module.exports = app => {
   // Create a new cause
   router.post("/create", causes.create);
   router.get("/findByTag", causes.findByTag);
+  router.get("/getAllCauses", causes.findAll);
   
   app.use('/api/causes', router);
   
