@@ -122,7 +122,7 @@ exports.poppulateDb = async (req, res) => {
         drug_overdose: cause.drug_overdose,
       });
     }
-    res.status(200).send({ message: ok });
+    res.status(200).send({ message: "ok" });
     
   } catch (error) {
     res.status(500).send({
