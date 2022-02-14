@@ -5,6 +5,7 @@ module.exports = app => {
   router.post("/create", causes.create);
   router.get("/findByTag", causes.findByTag);
   router.get("/getAllCauses", causes.findAll);
+  router.get("/createData", causes.poppulateDb);
   
   app.use('/api/causes', router);
   
